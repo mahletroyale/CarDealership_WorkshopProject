@@ -17,14 +17,12 @@ public class DealershipFileManager {
             if (dealershipLine == null) {
                 throw new IllegalArgumentException("inventory.csv is empty.");
             }
-
             String[] dealershipInfo = dealershipLine.split("\\|", -1);
 
             if (dealershipInfo.length != 3) {
                 throw new IllegalArgumentException(
                         "Invalid dealership header in inventory.csv.");
             }
-
             Dealership dealership = new Dealership(
                     dealershipInfo[0],
                     dealershipInfo[1],
